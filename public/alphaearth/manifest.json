@@ -1,0 +1,838 @@
+{
+  "retrievedAt": "2026-10-08T14:06:24.565Z",
+  "attribution": "The AlphaEarth Foundations Satellite Embedding dataset is produced by Google and Google DeepMind.",
+  "license": "CC-BY-4.0",
+  "method": "RGB visualization of de-quantized A00/A01/A02 using Google-provided normalized 256px overviews, reprojected from UTM to WGS84 with nearest-neighbor sampling. It is an embedding visualization, not photography, classified land cover or a water-depth forecast.",
+  "coverage": "Four selected port regions; annual 2017–2025 where published. Static previews retrieved on the stated date, not a real-time global model.",
+  "records": [
+    {
+      "id": "panama",
+      "name": "Panama Canal approaches",
+      "lon": -79.6,
+      "lat": 9,
+      "year": 2017,
+      "image": "/alphaearth/panama-2017.png",
+      "bounds": [
+        -80.25492891626894,
+        8.89017903215287,
+        -79.50686332250208,
+        9.633312551775884
+      ],
+      "source": "https://storage.googleapis.com/alphaearth_foundations/satellite_embedding/v1/annual/2017/17N/x4xlu6ixgg684dh8f-0000000000-0000008192.tiff",
+      "axes": [
+        "A00",
+        "A01",
+        "A02"
+      ],
+      "nativeResolutionMeters": 10,
+      "previewPixels": 256,
+      "overviewResolutionMeters": 320
+    },
+    {
+      "id": "panama",
+      "name": "Panama Canal approaches",
+      "lon": -79.6,
+      "lat": 9,
+      "year": 2018,
+      "image": "/alphaearth/panama-2018.png",
+      "bounds": [
+        -80.25492891626894,
+        8.89017903215287,
+        -79.50686332250208,
+        9.633312551775884
+      ],
+      "source": "https://storage.googleapis.com/alphaearth_foundations/satellite_embedding/v1/annual/2018/17N/x95zwbpreopk0yfrx-0000000000-0000008192.tiff",
+      "axes": [
+        "A00",
+        "A01",
+        "A02"
+      ],
+      "nativeResolutionMeters": 10,
+      "previewPixels": 256,
+      "overviewResolutionMeters": 320
+    },
+    {
+      "id": "panama",
+      "name": "Panama Canal approaches",
+      "lon": -79.6,
+      "lat": 9,
+      "year": 2019,
+      "image": "/alphaearth/panama-2019.png",
+      "bounds": [
+        -80.25492891626894,
+        8.89017903215287,
+        -79.50686332250208,
+        9.633312551775884
+      ],
+      "source": "https://storage.googleapis.com/alphaearth_foundations/satellite_embedding/v1/annual/2019/17N/x4zhng47279jvzd8k-0000000000-0000008192.tiff",
+      "axes": [
+        "A00",
+        "A01",
+        "A02"
+      ],
+      "nativeResolutionMeters": 10,
+      "previewPixels": 256,
+      "overviewResolutionMeters": 320
+    },
+    {
+      "id": "panama",
+      "name": "Panama Canal approaches",
+      "lon": -79.6,
+      "lat": 9,
+      "year": 2020,
+      "image": "/alphaearth/panama-2020.png",
+      "bounds": [
+        -80.25492891626894,
+        8.89017903215287,
+        -79.50686332250208,
+        9.633312551775884
+      ],
+      "source": "https://storage.googleapis.com/alphaearth_foundations/satellite_embedding/v1/annual/2020/17N/xm565vc7otuwt2263-0000000000-0000008192.tiff",
+      "axes": [
+        "A00",
+        "A01",
+        "A02"
+      ],
+      "nativeResolutionMeters": 10,
+      "previewPixels": 256,
+      "overviewResolutionMeters": 320
+    },
+    {
+      "id": "panama",
+      "name": "Panama Canal approaches",
+      "lon": -79.6,
+      "lat": 9,
+      "year": 2021,
+      "image": "/alphaearth/panama-2021.png",
+      "bounds": [
+        -80.25492891626894,
+        8.89017903215287,
+        -79.50686332250208,
+        9.633312551775884
+      ],
+      "source": "https://storage.googleapis.com/alphaearth_foundations/satellite_embedding/v1/annual/2021/17N/xbg1uul9s2wqkfnvt-0000000000-0000008192.tiff",
+      "axes": [
+        "A00",
+        "A01",
+        "A02"
+      ],
+      "nativeResolutionMeters": 10,
+      "previewPixels": 256,
+      "overviewResolutionMeters": 320
+    },
+    {
+      "id": "panama",
+      "name": "Panama Canal approaches",
+      "lon": -79.6,
+      "lat": 9,
+      "year": 2022,
+      "image": "/alphaearth/panama-2022.png",
+      "bounds": [
+        -80.25492891626894,
+        8.89017903215287,
+        -79.50686332250208,
+        9.633312551775884
+      ],
+      "source": "https://storage.googleapis.com/alphaearth_foundations/satellite_embedding/v1/annual/2022/17N/x7jog3o1agdhsnsjd-0000000000-0000008192.tiff",
+      "axes": [
+        "A00",
+        "A01",
+        "A02"
+      ],
+      "nativeResolutionMeters": 10,
+      "previewPixels": 256,
+      "overviewResolutionMeters": 320
+    },
+    {
+      "id": "panama",
+      "name": "Panama Canal approaches",
+      "lon": -79.6,
+      "lat": 9,
+      "year": 2023,
+      "image": "/alphaearth/panama-2023.png",
+      "bounds": [
+        -80.25492891626894,
+        8.89017903215287,
+        -79.50686332250208,
+        9.633312551775884
+      ],
+      "source": "https://storage.googleapis.com/alphaearth_foundations/satellite_embedding/v1/annual/2023/17N/xk9gjonk8g3kqqvwg-0000000000-0000008192.tiff",
+      "axes": [
+        "A00",
+        "A01",
+        "A02"
+      ],
+      "nativeResolutionMeters": 10,
+      "previewPixels": 256,
+      "overviewResolutionMeters": 320
+    },
+    {
+      "id": "panama",
+      "name": "Panama Canal approaches",
+      "lon": -79.6,
+      "lat": 9,
+      "year": 2024,
+      "image": "/alphaearth/panama-2024.png",
+      "bounds": [
+        -80.25492891626894,
+        8.89017903215287,
+        -79.50686332250208,
+        9.633312551775884
+      ],
+      "source": "https://storage.googleapis.com/alphaearth_foundations/satellite_embedding/v1/annual/2024/17N/x5xcga5a429fot6v9-0000000000-0000008192.tiff",
+      "axes": [
+        "A00",
+        "A01",
+        "A02"
+      ],
+      "nativeResolutionMeters": 10,
+      "previewPixels": 256,
+      "overviewResolutionMeters": 320
+    },
+    {
+      "id": "panama",
+      "name": "Panama Canal approaches",
+      "lon": -79.6,
+      "lat": 9,
+      "year": 2025,
+      "image": "/alphaearth/panama-2025.png",
+      "bounds": [
+        -80.25492891626894,
+        8.89017903215287,
+        -79.50686332250208,
+        9.633312551775884
+      ],
+      "source": "https://storage.googleapis.com/alphaearth_foundations/satellite_embedding/v1/annual/2025/17N/x7ocgquhmermkwr0s-0000000000-0000008192.tiff",
+      "axes": [
+        "A00",
+        "A01",
+        "A02"
+      ],
+      "nativeResolutionMeters": 10,
+      "previewPixels": 256,
+      "overviewResolutionMeters": 320
+    },
+    {
+      "id": "rotterdam",
+      "name": "Rotterdam & Rhine delta",
+      "lon": 4.14,
+      "lat": 51.95,
+      "year": 2017,
+      "image": "/alphaearth/rotterdam-2017.png",
+      "bounds": [
+        3.0000000000000004,
+        51.75450035343223,
+        4.206553906567678,
+        52.49701519722894
+      ],
+      "source": "https://storage.googleapis.com/alphaearth_foundations/satellite_embedding/v1/annual/2017/31N/xlyc81u8l782odbgj-0000000000-0000000000.tiff",
+      "axes": [
+        "A00",
+        "A01",
+        "A02"
+      ],
+      "nativeResolutionMeters": 10,
+      "previewPixels": 256,
+      "overviewResolutionMeters": 320
+    },
+    {
+      "id": "rotterdam",
+      "name": "Rotterdam & Rhine delta",
+      "lon": 4.14,
+      "lat": 51.95,
+      "year": 2018,
+      "image": "/alphaearth/rotterdam-2018.png",
+      "bounds": [
+        3.0000000000000004,
+        51.75450035343223,
+        4.206553906567678,
+        52.49701519722894
+      ],
+      "source": "https://storage.googleapis.com/alphaearth_foundations/satellite_embedding/v1/annual/2018/31N/xlidhkt9nqi6dccp7-0000000000-0000000000.tiff",
+      "axes": [
+        "A00",
+        "A01",
+        "A02"
+      ],
+      "nativeResolutionMeters": 10,
+      "previewPixels": 256,
+      "overviewResolutionMeters": 320
+    },
+    {
+      "id": "rotterdam",
+      "name": "Rotterdam & Rhine delta",
+      "lon": 4.14,
+      "lat": 51.95,
+      "year": 2019,
+      "image": "/alphaearth/rotterdam-2019.png",
+      "bounds": [
+        3.0000000000000004,
+        51.75450035343223,
+        4.206553906567678,
+        52.49701519722894
+      ],
+      "source": "https://storage.googleapis.com/alphaearth_foundations/satellite_embedding/v1/annual/2019/31N/x4pe28nk7s5j8r9o8-0000000000-0000000000.tiff",
+      "axes": [
+        "A00",
+        "A01",
+        "A02"
+      ],
+      "nativeResolutionMeters": 10,
+      "previewPixels": 256,
+      "overviewResolutionMeters": 320
+    },
+    {
+      "id": "rotterdam",
+      "name": "Rotterdam & Rhine delta",
+      "lon": 4.14,
+      "lat": 51.95,
+      "year": 2020,
+      "image": "/alphaearth/rotterdam-2020.png",
+      "bounds": [
+        3.0000000000000004,
+        51.75450035343223,
+        4.206553906567678,
+        52.49701519722894
+      ],
+      "source": "https://storage.googleapis.com/alphaearth_foundations/satellite_embedding/v1/annual/2020/31N/xamb6yz2r6icq4fo0-0000000000-0000000000.tiff",
+      "axes": [
+        "A00",
+        "A01",
+        "A02"
+      ],
+      "nativeResolutionMeters": 10,
+      "previewPixels": 256,
+      "overviewResolutionMeters": 320
+    },
+    {
+      "id": "rotterdam",
+      "name": "Rotterdam & Rhine delta",
+      "lon": 4.14,
+      "lat": 51.95,
+      "year": 2021,
+      "image": "/alphaearth/rotterdam-2021.png",
+      "bounds": [
+        3.0000000000000004,
+        51.75450035343223,
+        4.206553906567678,
+        52.49701519722894
+      ],
+      "source": "https://storage.googleapis.com/alphaearth_foundations/satellite_embedding/v1/annual/2021/31N/xyw5gocbo4caif67b-0000000000-0000000000.tiff",
+      "axes": [
+        "A00",
+        "A01",
+        "A02"
+      ],
+      "nativeResolutionMeters": 10,
+      "previewPixels": 256,
+      "overviewResolutionMeters": 320
+    },
+    {
+      "id": "rotterdam",
+      "name": "Rotterdam & Rhine delta",
+      "lon": 4.14,
+      "lat": 51.95,
+      "year": 2022,
+      "image": "/alphaearth/rotterdam-2022.png",
+      "bounds": [
+        3.0000000000000004,
+        51.75450035343223,
+        4.206553906567678,
+        52.49701519722894
+      ],
+      "source": "https://storage.googleapis.com/alphaearth_foundations/satellite_embedding/v1/annual/2022/31N/xqtm9gbfkhlucieaf-0000000000-0000000000.tiff",
+      "axes": [
+        "A00",
+        "A01",
+        "A02"
+      ],
+      "nativeResolutionMeters": 10,
+      "previewPixels": 256,
+      "overviewResolutionMeters": 320
+    },
+    {
+      "id": "rotterdam",
+      "name": "Rotterdam & Rhine delta",
+      "lon": 4.14,
+      "lat": 51.95,
+      "year": 2023,
+      "image": "/alphaearth/rotterdam-2023.png",
+      "bounds": [
+        3.0000000000000004,
+        51.75450035343223,
+        4.206553906567678,
+        52.49701519722894
+      ],
+      "source": "https://storage.googleapis.com/alphaearth_foundations/satellite_embedding/v1/annual/2023/31N/xntj3tkbkwx88qn88-0000000000-0000000000.tiff",
+      "axes": [
+        "A00",
+        "A01",
+        "A02"
+      ],
+      "nativeResolutionMeters": 10,
+      "previewPixels": 256,
+      "overviewResolutionMeters": 320
+    },
+    {
+      "id": "rotterdam",
+      "name": "Rotterdam & Rhine delta",
+      "lon": 4.14,
+      "lat": 51.95,
+      "year": 2024,
+      "image": "/alphaearth/rotterdam-2024.png",
+      "bounds": [
+        3.0000000000000004,
+        51.75450035343223,
+        4.206553906567678,
+        52.49701519722894
+      ],
+      "source": "https://storage.googleapis.com/alphaearth_foundations/satellite_embedding/v1/annual/2024/31N/xdi9pjjzugfbev4le-0000000000-0000000000.tiff",
+      "axes": [
+        "A00",
+        "A01",
+        "A02"
+      ],
+      "nativeResolutionMeters": 10,
+      "previewPixels": 256,
+      "overviewResolutionMeters": 320
+    },
+    {
+      "id": "rotterdam",
+      "name": "Rotterdam & Rhine delta",
+      "lon": 4.14,
+      "lat": 51.95,
+      "year": 2025,
+      "image": "/alphaearth/rotterdam-2025.png",
+      "bounds": [
+        3.0000000000000004,
+        51.75450035343223,
+        4.206553906567678,
+        52.49701519722894
+      ],
+      "source": "https://storage.googleapis.com/alphaearth_foundations/satellite_embedding/v1/annual/2025/31N/xpoom3scqp9gg50x6-0000000000-0000000000.tiff",
+      "axes": [
+        "A00",
+        "A01",
+        "A02"
+      ],
+      "nativeResolutionMeters": 10,
+      "previewPixels": 256,
+      "overviewResolutionMeters": 320
+    },
+    {
+      "id": "san-francisco",
+      "name": "San Francisco Bay",
+      "lon": -122.465,
+      "lat": 37.806,
+      "year": 2017,
+      "image": "/alphaearth/san-francisco-2017.png",
+      "bounds": [
+        -123.00000000000001,
+        37.74491179716657,
+        -122.06075609506043,
+        38.48690151269245
+      ],
+      "source": "https://storage.googleapis.com/alphaearth_foundations/satellite_embedding/v1/annual/2017/10N/xitjm380h5dblo49l-0000008192-0000000000.tiff",
+      "axes": [
+        "A00",
+        "A01",
+        "A02"
+      ],
+      "nativeResolutionMeters": 10,
+      "previewPixels": 256,
+      "overviewResolutionMeters": 320
+    },
+    {
+      "id": "san-francisco",
+      "name": "San Francisco Bay",
+      "lon": -122.465,
+      "lat": 37.806,
+      "year": 2018,
+      "image": "/alphaearth/san-francisco-2018.png",
+      "bounds": [
+        -123.00000000000001,
+        37.74491179716657,
+        -122.06075609506043,
+        38.48690151269245
+      ],
+      "source": "https://storage.googleapis.com/alphaearth_foundations/satellite_embedding/v1/annual/2018/10N/xw87ml7mjoccf0y8m-0000008192-0000000000.tiff",
+      "axes": [
+        "A00",
+        "A01",
+        "A02"
+      ],
+      "nativeResolutionMeters": 10,
+      "previewPixels": 256,
+      "overviewResolutionMeters": 320
+    },
+    {
+      "id": "san-francisco",
+      "name": "San Francisco Bay",
+      "lon": -122.465,
+      "lat": 37.806,
+      "year": 2019,
+      "image": "/alphaearth/san-francisco-2019.png",
+      "bounds": [
+        -123.00000000000001,
+        37.74491179716657,
+        -122.06075609506043,
+        38.48690151269245
+      ],
+      "source": "https://storage.googleapis.com/alphaearth_foundations/satellite_embedding/v1/annual/2019/10N/xelkfa3ezwmt3ytsy-0000008192-0000000000.tiff",
+      "axes": [
+        "A00",
+        "A01",
+        "A02"
+      ],
+      "nativeResolutionMeters": 10,
+      "previewPixels": 256,
+      "overviewResolutionMeters": 320
+    },
+    {
+      "id": "san-francisco",
+      "name": "San Francisco Bay",
+      "lon": -122.465,
+      "lat": 37.806,
+      "year": 2020,
+      "image": "/alphaearth/san-francisco-2020.png",
+      "bounds": [
+        -123.00000000000001,
+        37.74491179716657,
+        -122.06075609506043,
+        38.48690151269245
+      ],
+      "source": "https://storage.googleapis.com/alphaearth_foundations/satellite_embedding/v1/annual/2020/10N/xo0b8wamdvpz9vcrm-0000008192-0000000000.tiff",
+      "axes": [
+        "A00",
+        "A01",
+        "A02"
+      ],
+      "nativeResolutionMeters": 10,
+      "previewPixels": 256,
+      "overviewResolutionMeters": 320
+    },
+    {
+      "id": "san-francisco",
+      "name": "San Francisco Bay",
+      "lon": -122.465,
+      "lat": 37.806,
+      "year": 2021,
+      "image": "/alphaearth/san-francisco-2021.png",
+      "bounds": [
+        -123.00000000000001,
+        37.74491179716657,
+        -122.06075609506043,
+        38.48690151269245
+      ],
+      "source": "https://storage.googleapis.com/alphaearth_foundations/satellite_embedding/v1/annual/2021/10N/xgi48lqsqj8bcovwk-0000008192-0000000000.tiff",
+      "axes": [
+        "A00",
+        "A01",
+        "A02"
+      ],
+      "nativeResolutionMeters": 10,
+      "previewPixels": 256,
+      "overviewResolutionMeters": 320
+    },
+    {
+      "id": "san-francisco",
+      "name": "San Francisco Bay",
+      "lon": -122.465,
+      "lat": 37.806,
+      "year": 2022,
+      "image": "/alphaearth/san-francisco-2022.png",
+      "bounds": [
+        -123.00000000000001,
+        37.74491179716657,
+        -122.06075609506043,
+        38.48690151269245
+      ],
+      "source": "https://storage.googleapis.com/alphaearth_foundations/satellite_embedding/v1/annual/2022/10N/x9kgs5io6nupa65aw-0000008192-0000000000.tiff",
+      "axes": [
+        "A00",
+        "A01",
+        "A02"
+      ],
+      "nativeResolutionMeters": 10,
+      "previewPixels": 256,
+      "overviewResolutionMeters": 320
+    },
+    {
+      "id": "san-francisco",
+      "name": "San Francisco Bay",
+      "lon": -122.465,
+      "lat": 37.806,
+      "year": 2023,
+      "image": "/alphaearth/san-francisco-2023.png",
+      "bounds": [
+        -123.00000000000001,
+        37.74491179716657,
+        -122.06075609506043,
+        38.48690151269245
+      ],
+      "source": "https://storage.googleapis.com/alphaearth_foundations/satellite_embedding/v1/annual/2023/10N/xjtqldak16clgy5os-0000008192-0000000000.tiff",
+      "axes": [
+        "A00",
+        "A01",
+        "A02"
+      ],
+      "nativeResolutionMeters": 10,
+      "previewPixels": 256,
+      "overviewResolutionMeters": 320
+    },
+    {
+      "id": "san-francisco",
+      "name": "San Francisco Bay",
+      "lon": -122.465,
+      "lat": 37.806,
+      "year": 2024,
+      "image": "/alphaearth/san-francisco-2024.png",
+      "bounds": [
+        -123.00000000000001,
+        37.74491179716657,
+        -122.06075609506043,
+        38.48690151269245
+      ],
+      "source": "https://storage.googleapis.com/alphaearth_foundations/satellite_embedding/v1/annual/2024/10N/xcyo46pot2fg6a61t-0000008192-0000000000.tiff",
+      "axes": [
+        "A00",
+        "A01",
+        "A02"
+      ],
+      "nativeResolutionMeters": 10,
+      "previewPixels": 256,
+      "overviewResolutionMeters": 320
+    },
+    {
+      "id": "san-francisco",
+      "name": "San Francisco Bay",
+      "lon": -122.465,
+      "lat": 37.806,
+      "year": 2025,
+      "image": "/alphaearth/san-francisco-2025.png",
+      "bounds": [
+        -123.00000000000001,
+        37.74491179716657,
+        -122.06075609506043,
+        38.48690151269245
+      ],
+      "source": "https://storage.googleapis.com/alphaearth_foundations/satellite_embedding/v1/annual/2025/10N/x2lqsp4xl1lnajb1p-0000008192-0000000000.tiff",
+      "axes": [
+        "A00",
+        "A01",
+        "A02"
+      ],
+      "nativeResolutionMeters": 10,
+      "previewPixels": 256,
+      "overviewResolutionMeters": 320
+    },
+    {
+      "id": "singapore",
+      "name": "Singapore & Malacca approaches",
+      "lon": 103.84,
+      "lat": 1.26,
+      "year": 2017,
+      "image": "/alphaearth/singapore-2017.png",
+      "bounds": [
+        103.52728509021881,
+        0.7409092028334833,
+        104.2637648572878,
+        1.4821853504657676
+      ],
+      "source": "https://storage.googleapis.com/alphaearth_foundations/satellite_embedding/v1/annual/2017/48N/x7kf01d3dutp6cnkb-0000008192-0000000000.tiff",
+      "axes": [
+        "A00",
+        "A01",
+        "A02"
+      ],
+      "nativeResolutionMeters": 10,
+      "previewPixels": 256,
+      "overviewResolutionMeters": 320
+    },
+    {
+      "id": "singapore",
+      "name": "Singapore & Malacca approaches",
+      "lon": 103.84,
+      "lat": 1.26,
+      "year": 2018,
+      "image": "/alphaearth/singapore-2018.png",
+      "bounds": [
+        103.52728509021881,
+        0.7409092028334833,
+        104.2637648572878,
+        1.4821853504657676
+      ],
+      "source": "https://storage.googleapis.com/alphaearth_foundations/satellite_embedding/v1/annual/2018/48N/xrsusuv0ud3vf5hmg-0000008192-0000000000.tiff",
+      "axes": [
+        "A00",
+        "A01",
+        "A02"
+      ],
+      "nativeResolutionMeters": 10,
+      "previewPixels": 256,
+      "overviewResolutionMeters": 320
+    },
+    {
+      "id": "singapore",
+      "name": "Singapore & Malacca approaches",
+      "lon": 103.84,
+      "lat": 1.26,
+      "year": 2019,
+      "image": "/alphaearth/singapore-2019.png",
+      "bounds": [
+        103.52728509021881,
+        0.7409092028334833,
+        104.2637648572878,
+        1.4821853504657676
+      ],
+      "source": "https://storage.googleapis.com/alphaearth_foundations/satellite_embedding/v1/annual/2019/48N/xqtphxgl40a4repx9-0000008192-0000000000.tiff",
+      "axes": [
+        "A00",
+        "A01",
+        "A02"
+      ],
+      "nativeResolutionMeters": 10,
+      "previewPixels": 256,
+      "overviewResolutionMeters": 320
+    },
+    {
+      "id": "singapore",
+      "name": "Singapore & Malacca approaches",
+      "lon": 103.84,
+      "lat": 1.26,
+      "year": 2020,
+      "image": "/alphaearth/singapore-2020.png",
+      "bounds": [
+        103.52728509021881,
+        0.7409092028334833,
+        104.2637648572878,
+        1.4821853504657676
+      ],
+      "source": "https://storage.googleapis.com/alphaearth_foundations/satellite_embedding/v1/annual/2020/48N/xzfurxzkh4pfdceas-0000008192-0000000000.tiff",
+      "axes": [
+        "A00",
+        "A01",
+        "A02"
+      ],
+      "nativeResolutionMeters": 10,
+      "previewPixels": 256,
+      "overviewResolutionMeters": 320
+    },
+    {
+      "id": "singapore",
+      "name": "Singapore & Malacca approaches",
+      "lon": 103.84,
+      "lat": 1.26,
+      "year": 2021,
+      "image": "/alphaearth/singapore-2021.png",
+      "bounds": [
+        103.52728509021881,
+        0.7409092028334833,
+        104.2637648572878,
+        1.4821853504657676
+      ],
+      "source": "https://storage.googleapis.com/alphaearth_foundations/satellite_embedding/v1/annual/2021/48N/xb2lcrtb6ffkughb5-0000008192-0000000000.tiff",
+      "axes": [
+        "A00",
+        "A01",
+        "A02"
+      ],
+      "nativeResolutionMeters": 10,
+      "previewPixels": 256,
+      "overviewResolutionMeters": 320
+    },
+    {
+      "id": "singapore",
+      "name": "Singapore & Malacca approaches",
+      "lon": 103.84,
+      "lat": 1.26,
+      "year": 2022,
+      "image": "/alphaearth/singapore-2022.png",
+      "bounds": [
+        103.52728509021881,
+        0.7409092028334833,
+        104.2637648572878,
+        1.4821853504657676
+      ],
+      "source": "https://storage.googleapis.com/alphaearth_foundations/satellite_embedding/v1/annual/2022/48N/xv5seysrs1v1misp0-0000008192-0000000000.tiff",
+      "axes": [
+        "A00",
+        "A01",
+        "A02"
+      ],
+      "nativeResolutionMeters": 10,
+      "previewPixels": 256,
+      "overviewResolutionMeters": 320
+    },
+    {
+      "id": "singapore",
+      "name": "Singapore & Malacca approaches",
+      "lon": 103.84,
+      "lat": 1.26,
+      "year": 2023,
+      "image": "/alphaearth/singapore-2023.png",
+      "bounds": [
+        103.52728509021881,
+        0.7409092028334833,
+        104.2637648572878,
+        1.4821853504657676
+      ],
+      "source": "https://storage.googleapis.com/alphaearth_foundations/satellite_embedding/v1/annual/2023/48N/x1tctntlk8rschk8l-0000008192-0000000000.tiff",
+      "axes": [
+        "A00",
+        "A01",
+        "A02"
+      ],
+      "nativeResolutionMeters": 10,
+      "previewPixels": 256,
+      "overviewResolutionMeters": 320
+    },
+    {
+      "id": "singapore",
+      "name": "Singapore & Malacca approaches",
+      "lon": 103.84,
+      "lat": 1.26,
+      "year": 2024,
+      "image": "/alphaearth/singapore-2024.png",
+      "bounds": [
+        103.52728509021881,
+        0.7409092028334833,
+        104.2637648572878,
+        1.4821853504657676
+      ],
+      "source": "https://storage.googleapis.com/alphaearth_foundations/satellite_embedding/v1/annual/2024/48N/x0wl3rq1qf8yjihbv-0000008192-0000000000.tiff",
+      "axes": [
+        "A00",
+        "A01",
+        "A02"
+      ],
+      "nativeResolutionMeters": 10,
+      "previewPixels": 256,
+      "overviewResolutionMeters": 320
+    },
+    {
+      "id": "singapore",
+      "name": "Singapore & Malacca approaches",
+      "lon": 103.84,
+      "lat": 1.26,
+      "year": 2025,
+      "image": "/alphaearth/singapore-2025.png",
+      "bounds": [
+        103.52728509021881,
+        0.7409092028334833,
+        104.2637648572878,
+        1.4821853504657676
+      ],
+      "source": "https://storage.googleapis.com/alphaearth_foundations/satellite_embedding/v1/annual/2025/48N/xvgsq4eo408r5t66g-0000008192-0000000000.tiff",
+      "axes": [
+        "A00",
+        "A01",
+        "A02"
+      ],
+      "nativeResolutionMeters": 10,
+      "previewPixels": 256,
+      "overviewResolutionMeters": 320
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import vm from 'node:vm';
+import assert from 'node:assert/strict';
+const html=fs.readFileSync('public/globe.html','utf8');
+for(const m of html.matchAll(/<script>([\s\S]*?)<\/script>/g))new vm.Script(m[1]);
+const data=JSON.parse(fs.readFileSync('public/countries.geojson','utf8'));assert(data.features.length>=240);assert(data.features.every(f=>f.properties.ADMIN&&f.geometry));
+const response=await fetch('http://127.0.0.1:8787/');assert(response.ok);assert((await response.text()).includes('Trade flows.'));
+const feedResponse=await fetch('http://127.0.0.1:8787/api/feed');assert(feedResponse.ok);const feed=await feedResponse.json();console.log('Climate source verification:',{issue:feed.issue,status:feed.status,synopsis:feed.synopsis,years:feed.oni.length,errors:feed.errors});assert(feed.oni.length>50);assert(feed.issue);assert(feed.synopsis);
+const waterResponse=await fetch('http://127.0.0.1:8787/api/water?station=9414290&date=2023-12-01');assert(waterResponse.ok);const water=await waterResponse.json();console.log('Water verification:',{observations:water.observations.length,previous:water.previous.length,predictions:water.predictions.length,errors:water.errors});assert(water.observations.length>0);assert(water.predictions.length>0);
+assert.equal((await fetch('http://127.0.0.1:8787/api/water?station=arbitrary&date=2023-12-01')).status,400);assert.equal((await fetch('http://127.0.0.1:8787/api/water?station=9414290&date=2023-02-30')).status,400);
+console.log('Globe syntax, 258 country features, rendered route, NOAA feeds, historical observations, tide predictions and invalid-input checks passed.');

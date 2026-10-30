@@ -1,0 +1,32 @@
+name: Bug report
+description: Report a reproducible application or data-display problem.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: "Do not post secrets or vulnerabilities here. Follow SECURITY.md for private reporting."
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe actual and expected behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Include page, filters, date and station or country pair where relevant.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Commit or deployed version
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment and evidence
+      description: Browser, OS and sanitized screenshots/logs. Remove tokens and personal data.

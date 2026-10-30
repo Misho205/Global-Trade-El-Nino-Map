@@ -1,0 +1,22 @@
+name: Feature or data-source request
+description: Propose an improvement with clear coverage and evidence.
+title: "[Feature]: "
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: User problem
+      description: What decision or task should this improve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior and alternatives
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources, licensing and operational requirements
+      description: For data requests include official links, geography, history, units, update frequency, credentials and quotas. Do not paste keys.
