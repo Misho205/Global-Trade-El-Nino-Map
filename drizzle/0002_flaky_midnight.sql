@@ -1,0 +1,1 @@
+CREATE INDEX `professional_scenarios_account_period` ON `professional_scenarios` (`account_id`,`period`);

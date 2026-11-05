@@ -7,7 +7,20 @@ functional tests and builds are not a security certification. No release current
 has a promised security-support period or response SLA. Reviews must identify the
 exact commit and local changes; older reviews do not automatically cover new code.
 
-## Reporting
+## Paid-service controls
+
+Optional billing uses verified Cloudflare Access JWTs, not raw identity headers.
+Account write requests require the configured same origin. Stripe webhook bodies
+must pass HMAC/timestamp checks; canonical subscription state and server-side price
+mapping determine entitlement. Only active, unexpired subscriptions unlock private
+scenarios. Queries and monthly quotas are account-scoped. Checkout redirects and
+client-supplied plan/status values never grant access. Runtime billing is off by
+default. The new identity/payment paths still require a complete security audit
+and provider test-mode validation before taking real money.
+
+See [MONETIZATION.md](docs/MONETIZATION.md) for mandatory deployment settings.
+
+## Reporting a vulnerability
 
 Do not disclose credentials, exploit details or private data in public issues.
 Use GitHub **Security > Advisories > Report a vulnerability** when the owner has

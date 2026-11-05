@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./commercial.css";
 
 export const metadata: Metadata = {
-  title: "TerraTrade — Global Trade & ENSO Atlas",
+  title: "Global-Trade-El-Nino-Map — Trade & Climate Atlas",
   description: "Explore global trade corridors on a satellite globe, compare NOAA climate and water-level records, and follow the official ENSO outlook.",
   other: {
     "codex-preview": "development",

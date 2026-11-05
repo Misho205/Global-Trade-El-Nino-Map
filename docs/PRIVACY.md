@@ -6,6 +6,18 @@ actual deployed configuration and publish appropriate contact/retention details.
 
 ## Current application behavior
 
+### Optional paid workspace
+
+When activated, signed-in paid accounts store a derived account ID, verified email,
+Stripe customer/subscription IDs and status, checkout bookkeeping and user-entered
+private comparisons. Stripe receives billing identity/payment information through
+hosted checkout/portal; card details are not collected by the application's UI.
+Cloudflare Access verifies sign-in. Billing event IDs are retained for deduplication.
+The scenario history API is scoped to the verified account. The existing public
+data cache remains separate. Define account/scenario/event retention, deletion,
+support access and merchant privacy terms before activation; no automated paid-data
+deletion is claimed. See [MONETIZATION.md](MONETIZATION.md).
+
 - The main atlas stores its language preference in browser localStorage and sets
   a `googtrans` cookie for the Google Translate widget.
 - The browser can request imagery/terrain from Esri, flags from FlagCDN and the

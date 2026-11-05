@@ -7,6 +7,15 @@ and El Nino climate observations. Built with React, Vinext, Cesium and Cloudflar
 [Data sources](docs/DATA-SOURCES.md) | [Contributing](CONTRIBUTING.md) |
 [Security](SECURITY.md)
 
+## Optional hosted subscriptions
+
+Public observation remains free. `/pricing` proposes Professional (EUR 49/month)
+and Fleet (EUR 199/month), with private manual transport comparisons and saved
+history. Billing is disabled until the operator configures verified sign-in,
+Stripe, D1 migrations and launch acceptance. There is no autonomous/live routing
+or navigational clearance. See [setup and scope](docs/MONETIZATION.md) and
+[Bulgarian overview](docs/MONETIZATION.bg.md). The MIT license is unchanged.
+
 ## Project status
 
 Early-stage research and educational software. The project's display name has

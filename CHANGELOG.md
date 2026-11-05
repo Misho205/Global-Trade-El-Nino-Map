@@ -4,6 +4,14 @@ No public stable release or release tag is claimed.
 
 ## Unreleased
 
+### Subscription pilot
+
+- Public pricing and protected account workspace with manual transport comparisons.
+- Proposed Free, Professional and Fleet plans; optional Stripe checkout and portal.
+- Signed webhook processing, verified Access JWT identity and account-scoped quotas.
+- Additive D1 billing/scenario migrations; payments remain off until configured.
+- No live navigation, multi-user seats or data-provider licenses are implied.
+
 ### Added
 
 - Interactive globe, schematic transport corridors and trade/climate dashboards.
