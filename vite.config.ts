@@ -1,3 +1,6 @@
+import {researchSchedule} from './build/research-schedule';
+import {billingQueueConfig} from './build/billing-queue-config';
+import { fileURLToPath } from 'node:url';
 import vinext from "vinext";
 import { defineConfig } from "vite";
 import hostingConfig from "./.openai/hosting.json";
@@ -5,12 +8,15 @@ import { readExecutionProfile } from "./scripts/execution-profile.mjs";
 import { sites } from "./build/sites-vite-plugin";
 import { connectorPreview } from "./build/connector-preview-plugin.mjs";
 import { cloudflareTarget } from './build/cloudflare-target';
+import { deploymentEnvironment } from './build/deployment-environment';
 
 const SITE_CREATOR_PLACEHOLDER_DATABASE_ID =
   "00000000-0000-4000-8000-000000000000";
 
 const { d1, r2 } = hostingConfig;
 const target = cloudflareTarget(process.env);
+const deployment = deploymentEnvironment(process.env);
+const research = researchSchedule(process.env);
 
 // macOS Seatbelt blocks FSEvents, so Codex previews need polling for HMR.
 const isCodexSeatbeltSandbox = process.env.CODEX_SANDBOX === "seatbelt";
@@ -19,10 +25,13 @@ const managedLinux = readExecutionProfile() === "managed-linux";
 const localBindingConfig = {
   ...(target.standalone ? { name: process.env.ATLAS_WORKER_NAME || 'terra-trade' } : {}),
   main: "./build/sites-worker.ts",
+  ...(deployment ? { vars: { ATLAS_ENVIRONMENT: deployment.name }, observability: { enabled: true } } : {}),
+  ...billingQueueConfig(process.env),
+  ...(research ? {vars:{...(deployment?{ATLAS_ENVIRONMENT:deployment.name}:{}),...billingQueueConfig(process.env).vars,...research.vars}} : {}),
   compatibility_flags: ["nodejs_compat"],
   // Standalone Cloudflare deployments only; Sites uses a linked cloud task.
   ...(process.env.ATLAS_ENABLE_CRON === 'true'
-    ? { triggers: { crons: ['*/6 * * * *'] } }
+    ? { triggers: { crons: ['*/6 * * * *',...(research?[research.cron]:[])] } }
     : {}),
   d1_databases: d1
     ? [
@@ -30,6 +39,7 @@ const localBindingConfig = {
           binding: d1,
           database_name: target.standalone ? process.env.CLOUDFLARE_D1_DATABASE_NAME || 'terra-trade-data' : 'site-creator-d1',
           database_id: target.databaseId || SITE_CREATOR_PLACEHOLDER_DATABASE_ID,
+          migrations_dir: fileURLToPath(new URL('./drizzle', import.meta.url)),
         },
       ]
     : [],

@@ -1,0 +1,71 @@
+openapi: 3.1.0
+info:
+  title: Atlas account sessions staging API
+  version: 0.1.0
+  description: Auth0 staging only. Responses disable caching; writes require the exact canonical Origin. Does not revoke Auth0 SSO or external provider tokens.
+security:
+  - customerSession: []
+paths:
+  /api/v1/account/sessions:
+    get:
+      operationId: listAccountSessions
+      responses:
+        '200':
+          description: Own active sessions, latest 100; no token payloads or provider subjects.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [sessions]
+                properties:
+                  sessions:
+                    type: array
+                    maxItems: 100
+                    items:
+                      type: object
+                      required: [id, created_at, last_seen_at, expires_at]
+                      properties:
+                        id: {type: string, pattern: '^[a-f0-9]{32}$'}
+                        created_at: {type: integer, description: Unix milliseconds}
+                        last_seen_at: {type: integer, description: Unix milliseconds}
+                        expires_at: {type: integer, description: Unix milliseconds}
+        default: {$ref: '#/components/responses/Failure'}
+    delete:
+      operationId: revokeAccountSessions
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+              description: Omit sessionId to revoke all currently persisted app sessions for the caller.
+              properties:
+                sessionId: {type: string, pattern: '^[a-f0-9]{32}$'}
+      responses:
+        '200':
+          description: Revoked own sessions. Foreign account IDs affect zero rows. Already authorized work can finish; future requests are denied.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [revoked]
+                properties:
+                  revoked: {type: integer, minimum: 0}
+        default: {$ref: '#/components/responses/Failure'}
+components:
+  securitySchemes:
+    customerSession:
+      type: apiKey
+      in: cookie
+      name: __Host-atlas-session
+  responses:
+    Failure:
+      description: 400 malformed request; 401 unauthenticated; 403 origin denied; 503 configuration/storage unavailable.
+      content:
+        application/json:
+          schema:
+            type: object
+            required: [error]
+            properties:
+              error: {type: string}

@@ -59,7 +59,7 @@ test('SQLite save quota is account-scoped and idempotent; migration preserves so
 });
 test('older/canceled subscriptions cannot replace a newer active subscription',()=>{
  const db=new DatabaseSync(':memory:');for(const file of readdirSync(new URL('../drizzle/',import.meta.url)).filter(name=>name.endsWith('.sql')).sort())db.exec(readFileSync(new URL('../drizzle/'+file,import.meta.url),'utf8'));
- const source=readFileSync(new URL('../app/api/billing/webhook/route.ts',import.meta.url),'utf8'),sql=source.match(/prepare\("(INSERT INTO billing_subscriptions[^"]+)"\)/)?.[1];assert.ok(sql);
+ const source=readFileSync(new URL('../lib/subscription-reconciliation.ts',import.meta.url),'utf8'),sql=source.match(/prepare\("(INSERT INTO billing_subscriptions[^"]+)"\)/)?.[1];assert.ok(sql);
  const update=db.prepare(sql);update.run('a','sub_old','cus_dummy','professional','active',2000,10,100);
  update.run('a','sub_new','cus_dummy','fleet','active',3000,20,200);
  update.run('a','sub_old','cus_dummy','professional','canceled',2000,21,300);
