@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "./commercial.css";
+import "./research.css";
 
 export const metadata: Metadata = {
   title: "Global-Trade-El-Nino-Map — Trade & Climate Atlas",

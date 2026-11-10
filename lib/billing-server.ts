@@ -1,3 +1,4 @@
+import {currentAuth0Identity} from './customer-auth';
 import {env} from 'cloudflare:workers';
 import {accountIdentity} from './access-identity';
 import {BillingError,isPaidPlan,paidEntitlement,plans,requireSameOrigin,type PaidPlan} from './billing-policy';
@@ -7,7 +8,7 @@ export function appOrigin(){
  try{const url=new URL(String(billingSettings().PUBLIC_APP_URL||''));if(url.protocol!=='https:'||url.username||url.password||url.pathname!=='/'||url.search||url.hash)throw Error();return url.origin;}catch{throw new BillingError(503,'PUBLIC_APP_URL must be the canonical HTTPS site origin.');}
 }
 export function billingReady(){const s=billingSettings();return s.BILLING_ENABLED==='true'&&s.PRO_FEATURES_VALIDATED==='true'&&!!s.STRIPE_SECRET_KEY&&!!s.STRIPE_WEBHOOK_SECRET&&!!s.STRIPE_PRICE_PROFESSIONAL&&!!s.STRIPE_PRICE_FLEET&&!!s.ACCESS_TEAM_DOMAIN&&!!s.ACCESS_AUD&&!!s.PUBLIC_APP_URL;}
-export async function billingIdentity(request:Request,write=false){if(write)requireSameOrigin(request,appOrigin());return accountIdentity(request,billingSettings());}
+export async function billingIdentity(request:Request,write=false){if(write)requireSameOrigin(request,appOrigin());if(billingSettings().AUTH_PROVIDER==='auth0'){const identity=currentAuth0Identity();if(!identity)throw new BillingError(401,'Sign in required.');return identity;}return accountIdentity(request,billingSettings());}
 export async function stripeRequest(path:string,form?:URLSearchParams,idempotencyKey?:string){
  const secret=String(billingSettings().STRIPE_SECRET_KEY||'');if(!secret)throw new BillingError(503,'Payments are not configured.');
  const response=await fetch('https://api.stripe.com/v1/'+path,{method:form?'POST':'GET',headers:{Authorization:'Bearer '+secret,'Stripe-Version':'2026-10-28.endive',...(form?{'Content-Type':'application/x-www-form-urlencoded'}:{}),...(idempotencyKey?{'Idempotency-Key':idempotencyKey}:{})},...(form?{body:form}:{}),signal:AbortSignal.timeout(15000)});

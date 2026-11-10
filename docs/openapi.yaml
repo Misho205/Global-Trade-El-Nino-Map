@@ -1,0 +1,41 @@
+openapi: 3.1.0
+info:
+  title: Global Trade Atlas operational API
+  version: 1.0.0
+  description: Initial versioned operational endpoints. Existing business APIs are not yet described by this document.
+paths:
+  /api/v1/health/live:
+    get:
+      operationId: liveness
+      responses:
+        '200':
+          description: Worker handler is live; does not assert dependency availability.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [status]
+                properties:
+                  status: {type: string, const: ok}
+  /api/v1/health/ready:
+    get:
+      operationId: readiness
+      responses:
+        '200':
+          description: Current application database queries succeed.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [status]
+                properties:
+                  status: {type: string, const: ready}
+        '503':
+          description: Storage is missing, unavailable or lacks the queried schema.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [status]
+                properties:
+                  status: {type: string, const: not_ready}

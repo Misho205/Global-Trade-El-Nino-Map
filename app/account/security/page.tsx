@@ -1,0 +1,10 @@
+'use client';
+import {useEffect,useState} from 'react';
+type Session={id:string;created_at:number;last_seen_at:number;expires_at:number};
+export default function Security(){
+ const [sessions,setSessions]=useState<Session[]>([]),[error,setError]=useState(''),[busy,setBusy]=useState(false);
+ async function load(){const r=await fetch('/api/v1/account/sessions',{cache:'no-store'});const data=await r.json() as {error?:string;sessions?:Session[]};if(!r.ok)throw Error(data.error||'Unable to load sessions.');setSessions(data.sessions||[]);}
+ useEffect(()=>{load().catch(e=>setError(e.message));},[]);
+ async function revoke(id?:string){setBusy(true);setError('');try{const r=await fetch('/api/v1/account/sessions',{method:'DELETE',headers:{'Content-Type':'application/json'},body:JSON.stringify(id?{sessionId:id}:{})});if(!r.ok)throw Error('Unable to revoke sessions.');if(!id){location.assign('/auth/login?returnTo=%2Faccount%2Fsecurity');return;}await load();}catch(e){setError(e instanceof Error?e.message:'Request failed.');}finally{setBusy(false);}}
+ return <main className="commercial-page"><header className="commercial-header"><a href="/account" className="commercial-brand">Account security</a><a href="/">Free atlas</a></header><section className="account-panel"><h1>Signed-in sessions</h1><p>Staging Auth0 pilot. Revocation blocks subsequent requests; work already authorized may finish. Revoking all sessions signs out this browser too. This does not revoke the separate Auth0 single sign-on session.</p>{error&&<p role="alert" className="commercial-notice">{error}</p>}{sessions.map(session=><div className="history-row" key={session.id}><span>Session …{session.id.slice(-8)} · signed in {new Date(session.created_at).toLocaleString()} · last seen {new Date(session.last_seen_at).toLocaleString()}</span><button className="commercial-button secondary" disabled={busy} onClick={()=>revoke(session.id)}>Revoke</button></div>)}<button className="commercial-button" disabled={busy||!sessions.length} onClick={()=>revoke()}>Revoke all app sessions</button></section></main>;
+}

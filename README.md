@@ -140,3 +140,9 @@ Original project code and documentation use the [MIT license](LICENSE).
 Bundled components, data, imagery and services retain their own licenses/terms;
 see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). This project is not affiliated
 with or endorsed by the data providers.
+
+## SaaS staging work in progress
+
+Environment and health setup: [docs/ENVIRONMENTS.md](docs/ENVIRONMENTS.md). Opt-in identity pilot: [docs/AUTH0.md](docs/AUTH0.md). Organization membership, invitations and role pilot: [docs/ORGANIZATIONS.md](docs/ORGANIZATIONS.md). These additions are not deployed or approved for production; current individual subscriptions and public atlas behavior are preserved. See [IMPLEMENTATION_PLAN.md](IMPLEMENTATION_PLAN.md) for remaining stages.
+
+Stateful session/revocation setup: [docs/SESSIONS.md](docs/SESSIONS.md). Opt-in durable Stripe jobs: [docs/BILLING-JOBS.md](docs/BILLING-JOBS.md). Both remain staging pilots pending provider end-to-end verification.

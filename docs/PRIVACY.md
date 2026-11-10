@@ -46,3 +46,7 @@ deletion is claimed. See [MONETIZATION.md](MONETIZATION.md).
 Clearing the browser's site data removes the local language preference. Server
 cache pruning is described in [DATA-UPDATES.md](../DATA-UPDATES.md); it is not a
 complete policy for all platform logs or third-party storage.
+
+## Staging identity and job additions
+
+The opt-in Auth0 staging integration stores sensitive session state, including provider tokens/claims, in D1 auth_sessions; the browser receives an SDK-encrypted reference cookie. Revocation clears payloads and retains temporary tombstones. Scheduled cleanup removes rows 24 hours after their absolute expiry. Organization audit/invitation and billing-inbox retention require operator policy before production. Billing inbox envelopes contain event/type/time/subscription identifiers, not full raw payment events. Auth0 is an additional processor that requires review of actual contract, region and international transfers. App session revocation does not revoke Auth0 SSO or external access tokens. These implementation notes are not a legally reviewed policy.

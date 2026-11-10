@@ -49,3 +49,6 @@ next-env.d.ts
 
 *.tsbuildinfo
 .dev.vars*
+
+/.auth0-toolchain/
+/node_modules-install-incomplete/
